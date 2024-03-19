@@ -1,0 +1,1137 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.Form..Create(BaseForm)
+Gui.Form..Caption("Form")
+Gui.Form..Size(15360,12540)
+Gui.Form..MinX(0)
+Gui.Form..MinY(0)
+Gui.Form..Position(0,0)
+Gui.Form..AlwaysOnTop(False)
+Gui.Form..FontName("Tahoma")
+Gui.Form..FontSize(8.25)
+Gui.Form..ControlBox(True)
+Gui.Form..MaxButton(True)
+Gui.Form..MinButton(True)
+Gui.Form..MousePointer(0)
+Gui.Form..Moveable(True)
+Gui.Form..Sizeable(True)
+Gui.Form..ShowInTaskBar(True)
+Gui.Form..TitleBar(True)
+Gui.Form..Event(UnLoad,Form_UnLoad)
+Gui.Form.GsGridControl1.Create(GsGridControl)
+Gui.Form.GsGridControl1.Enabled(True)
+Gui.Form.GsGridControl1.Visible(True)
+Gui.Form.GsGridControl1.Zorder(0)
+Gui.Form.GsGridControl1.Size(15270,9855)
+Gui.Form.GsGridControl1.Position(45,2175)
+Gui.Form.GsGridControl1.Anchor(15)
+Gui.Form.cmd1.Create(Button)
+Gui.Form.cmd1.Enabled(True)
+Gui.Form.cmd1.Visible(True)
+Gui.Form.cmd1.Zorder(0)
+Gui.Form.cmd1.Size(1125,345)
+Gui.Form.cmd1.Position(3000,1680)
+Gui.Form.cmd1.Caption("Export")
+Gui.Form.cmd1.FontName("Tahoma")
+Gui.Form.cmd1.FontSize(8.25)
+Gui.Form.cmd1.Event(Click,ExportToFile)
+Gui.Form.chkRebuildCol.Create(CheckBox)
+Gui.Form.chkRebuildCol.Enabled(True)
+Gui.Form.chkRebuildCol.Visible(True)
+Gui.Form.chkRebuildCol.Zorder(0)
+Gui.Form.chkRebuildCol.Size(1890,300)
+Gui.Form.chkRebuildCol.Position(210,1275)
+Gui.Form.chkRebuildCol.Caption("Rebuild WC Columns")
+Gui.Form.chkRebuildCol.FontName("Tahoma")
+Gui.Form.chkRebuildCol.FontSize(8.25)
+Gui.Form.dtpFrom.Create(DatePicker)
+Gui.Form.dtpFrom.Enabled(True)
+Gui.Form.dtpFrom.Visible(True)
+Gui.Form.dtpFrom.Zorder(0)
+Gui.Form.dtpFrom.Size(1500,300)
+Gui.Form.dtpFrom.Position(2970,180)
+Gui.Form.dtpFrom.CheckBox(False)
+Gui.Form.dtpFrom.FontName("Tahoma")
+Gui.Form.dtpFrom.FontSize(8.25)
+Gui.Form.dtpFrom.AllowBlank(True)
+Gui.Form.dtpTo.Create(DatePicker)
+Gui.Form.dtpTo.Enabled(True)
+Gui.Form.dtpTo.Visible(True)
+Gui.Form.dtpTo.Zorder(0)
+Gui.Form.dtpTo.Size(1500,300)
+Gui.Form.dtpTo.Position(2970,570)
+Gui.Form.dtpTo.CheckBox(False)
+Gui.Form.dtpTo.FontName("Tahoma")
+Gui.Form.dtpTo.FontSize(8.25)
+Gui.Form.dtpTo.AllowBlank(True)
+Gui.Form.lbl1.Create(Label,"From",True,360,195,0,2550,225,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl1.BorderStyle(0)
+Gui.Form.lbl2.Create(Label,"To",True,180,195,0,2700,615,True,0,"Tahoma",8.25,,0,0)
+Gui.Form.lbl2.BorderStyle(0)
+Gui.Form.cmdSelectCust.Create(Button)
+Gui.Form.cmdSelectCust.Enabled(True)
+Gui.Form.cmdSelectCust.Visible(True)
+Gui.Form.cmdSelectCust.Zorder(0)
+Gui.Form.cmdSelectCust.Size(1425,345)
+Gui.Form.cmdSelectCust.Position(210,210)
+Gui.Form.cmdSelectCust.Caption("Select Customer")
+Gui.Form.cmdSelectCust.FontName("Tahoma")
+Gui.Form.cmdSelectCust.FontSize(8.25)
+Gui.Form.cmdSelectCust.Event(Click,cmdSelectCus_Clicked)
+Gui.Form.cmdBuildData.Create(Button)
+Gui.Form.cmdBuildData.Enabled(True)
+Gui.Form.cmdBuildData.Visible(True)
+Gui.Form.cmdBuildData.Zorder(0)
+Gui.Form.cmdBuildData.Size(1125,345)
+Gui.Form.cmdBuildData.Position(210,1680)
+Gui.Form.cmdBuildData.Caption("Build Data")
+Gui.Form.cmdBuildData.FontName("Tahoma")
+Gui.Form.cmdBuildData.FontSize(8.25)
+Gui.Form.cmdBuildData.Event(Click,cmdBuildData_Click)
+Gui.Form.chkAllCus.Create(CheckBox)
+Gui.Form.chkAllCus.Enabled(True)
+Gui.Form.chkAllCus.Visible(True)
+Gui.Form.chkAllCus.Zorder(0)
+Gui.Form.chkAllCus.Size(1500,300)
+Gui.Form.chkAllCus.Position(210,630)
+Gui.Form.chkAllCus.Caption("All Customers")
+Gui.Form.chkAllCus.FontName("Tahoma")
+Gui.Form.chkAllCus.FontSize(8.25)
+Gui.Form.chkAllCus.Event(Change,chkAllCus_Change)
+Gui.Form.GsgsExport.Create(GsGridControl)
+Gui.Form.GsgsExport.Enabled(True)
+Gui.Form.GsgsExport.Visible(False)
+Gui.Form.GsgsExport.Zorder(0)
+Gui.Form.GsgsExport.Size(2295,1215)
+Gui.Form.GsgsExport.Position(7680,675)
+Gui.FormCustomer..Create(BaseForm)
+Gui.FormCustomer..Caption("Select Customer")
+Gui.FormCustomer..Size(6690,10800)
+Gui.FormCustomer..MinX(0)
+Gui.FormCustomer..MinY(0)
+Gui.FormCustomer..Position(0,0)
+Gui.FormCustomer..AlwaysOnTop(False)
+Gui.FormCustomer..FontName("Tahoma")
+Gui.FormCustomer..FontSize(8.25)
+Gui.FormCustomer..ControlBox(True)
+Gui.FormCustomer..MaxButton(True)
+Gui.FormCustomer..MinButton(True)
+Gui.FormCustomer..MousePointer(0)
+Gui.FormCustomer..Moveable(True)
+Gui.FormCustomer..Sizeable(True)
+Gui.FormCustomer..ShowInTaskBar(True)
+Gui.FormCustomer..TitleBar(True)
+Gui.FormCustomer..Event(UnLoad,FormCustomer_UnLoad)
+Gui.FormCustomer.GsgcCustomer.Create(GsGridControl)
+Gui.FormCustomer.GsgcCustomer.Enabled(True)
+Gui.FormCustomer.GsgcCustomer.Visible(True)
+Gui.FormCustomer.GsgcCustomer.Zorder(0)
+Gui.FormCustomer.GsgcCustomer.Size(6525,9270)
+Gui.FormCustomer.GsgcCustomer.Position(90,120)
+Gui.FormCustomer.GsgcCustomer.Anchor(13)
+Gui.FormCustomer.cmdOK.Create(Button)
+Gui.FormCustomer.cmdOK.Enabled(True)
+Gui.FormCustomer.cmdOK.Visible(True)
+Gui.FormCustomer.cmdOK.Zorder(0)
+Gui.FormCustomer.cmdOK.Size(1125,345)
+Gui.FormCustomer.cmdOK.Position(450,9690)
+Gui.FormCustomer.cmdOK.Caption("OK")
+Gui.FormCustomer.cmdOK.FontName("Tahoma")
+Gui.FormCustomer.cmdOK.FontSize(8.25)
+Gui.FormCustomer.cmdOK.Event(Click,cmdOK_Clicked)
+Gui.FormCustomer.cmdCANCEL.Create(Button)
+Gui.FormCustomer.cmdCANCEL.Enabled(True)
+Gui.FormCustomer.cmdCANCEL.Visible(True)
+Gui.FormCustomer.cmdCANCEL.Zorder(0)
+Gui.FormCustomer.cmdCANCEL.Size(1125,345)
+Gui.FormCustomer.cmdCANCEL.Position(2010,9690)
+Gui.FormCustomer.cmdCANCEL.Caption("CANCEL")
+Gui.FormCustomer.cmdCANCEL.FontName("Tahoma")
+Gui.FormCustomer.cmdCANCEL.FontSize(8.25)
+Gui.FormCustomer.cmdCANCEL.Event(Click,FormCustomer_UnLoad)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+v.Global.sSelectedCustomer.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+f.Intrinsic.Control.Try
+	
+	v.Local.dFromDate.Declare(Date)
+	v.Local.dToDate.Declare(Date)
+	
+	f.ODBC.Connection!Con.OpenCompanyConnection
+	
+	'preset controls
+	gui.Form.chkAllCus.Value(True)
+	gui.Form.cmdSelectCust.Enabled(False)
+	
+	f.Intrinsic.Date.DateAdd("M", 1, v.Ambient.Date, v.Local.dToDate)
+	f.Intrinsic.Date.DateAdd("M", -1, v.Ambient.Date, v.Local.dFromDate)
+	
+	gui.Form.dtpFrom.Value(v.Local.dFromDate)
+	gui.Form.dtpTo.Value(v.Local.dToDate)
+	
+	gui.Form..Show
+
+	f.ODBC.Connection!Con.Close
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.cmdSelectCus_Clicked.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	
+	f.ODBC.Connection!Con.OpenCompanyConnection
+	
+	v.Local.sSQL.Set("select RTRIM(CUSTOMER) CUSTOMER, RTRIM(NAME_CUSTOMER) NAME from V_CUSTOMER_MASTER order by CUSTOMER")
+	f.Intrinsic.Control.If(v.DataTable.dtCustomer.Exists)
+		f.Data.DataTable.Close("dtCustomer")
+	f.Intrinsic.Control.EndIf
+	f.Data.DataTable.CreateFromSQL("dtCustomer", "Con", v.Local.sSQL, True)
+	
+	'add col
+	f.Data.DataTable.AddColumn("dtCustomer", "SELECT", "Boolean")
+	f.Data.Datatable.SetValue("dtCustomer", -1, "SELECT", False)
+	f.ODBC.Connection!Con.Close
+	
+	gui.FormCustomer.GsgcCustomer.AddGridviewFromDatatable("gvCustomer", "dtCustomer")
+	
+	gui.FormCustomer.GsgcCustomer.SetGridviewProperty("gvCustomer", v.Enum.GridViewPropertyNames!Editable, True)
+	gui.FormCustomer.GsgcCustomer.SetGridviewProperty("gvCustomer", v.Enum.GridViewPropertyNames!ReadOnly, False)
+	
+	'format
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "CUSTOMER" , v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "NAME" , v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "SELECT" , v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "SELECT", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "CUSTOMER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "CUSTOMER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "NAME", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "SELECT", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "CUSTOMER", v.Enum.ColumnPropertyNames!MinWidth, 80)
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "NAME", v.Enum.ColumnPropertyNames!MinWidth, 240)
+	gui.FormCustomer.GsgcCustomer.SetColumnProperty("gvCustomer", "SELECT", v.Enum.ColumnPropertyNames!MinWidth, 50)
+	
+	
+	gui.FormCustomer.GsgcCustomer.MainView("gvCustomer")
+
+	gui.FormCustomer..Visible(True)
+	gui.Form..Visible(False)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdSelectCus_Clicked.End
+
+Program.Sub.cmdOK_Clicked.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.iCounter.Declare(String)
+	v.Local.sSelected.Declare(String)
+	
+	v.Global.sSelectedCustomer.Set("")
+	f.Intrinsic.Control.CallSub(FormCustomer_UnLoad)
+	gui.Form..Visible(True)
+	f.Data.DataView.Create("dtCustomer", "dvSelectedCustomer", 22 ,"SELECT=TRUE", "")
+	
+	f.Intrinsic.Control.If(v.DataTable.dtSelectedCustomer.Exists)
+		f.Data.Datatable.Close("dtSelectedCustomer")
+	f.Intrinsic.Control.EndIf
+	f.Data.DataView.ToDataTable("dtCustomer", "dvSelectedCustomer", "dtSelectedCustomer")
+	f.Data.DataView.Close("dtCustomer", "dvSelectedCustomer")
+	
+	f.Intrinsic.Control.If(v.DataTable.dtSelectedCustomer.RowCount,>,0)
+		f.Intrinsic.Control.For(v.Local.iCounter, 0, v.DataTable.dtSelectedCustomer.RowCount--, 1)
+			f.Intrinsic.Control.If(v.Local.iCounter,=,0)
+				f.Intrinsic.String.Build("'{0}'", v.DataTable.dtSelectedCustomer(v.Local.iCounter).CUSTOMER!FieldValTrim, v.Local.sSelected)
+			f.Intrinsic.Control.Else
+				f.Intrinsic.String.Build("{0},'{1}'", v.Local.sSelected, v.DataTable.dtSelectedCustomer(v.Local.iCounter).CUSTOMER!FieldValTrim, v.Local.sSelected)
+			f.Intrinsic.Control.EndIf
+		f.Intrinsic.Control.Next(v.Local.iCounter)
+	
+	f.Intrinsic.Control.EndIf
+	
+	f.Data.Datatable.Close("dtSelectedCustomer")
+	v.Global.sSelectedCustomer.Set(v.Local.sSelected)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdOK_Clicked.End
+
+Program.Sub.FormCustomer_UnLoad.Start
+gui.FormCustomer..Visible(False)
+gui.Form..Visible(True)
+Program.Sub.FormCustomer_UnLoad.End
+
+Program.Sub.DropTableWC.Start
+f.Intrinsic.Control.Try
+	v.Local.sRet.Declare(String)
+	f.ODBC.Connection!Con.Execute("drop table GCG_ANCO_WC")
+f.Intrinsic.Control.Catch
+	'not exist
+'	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.DropTableWC.End
+
+Program.Sub.CreateWCTable.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sWC.Declare(String)
+	v.Local.iCounter.Declare(Long)
+	v.Local.sMsg.Declare(String)
+	
+	'get colunm
+	f.ODBC.Connection!Con.ExecuteAndReturn("select 'x' + RTRIM(MACHINE) WC from V_WORKCENTERS where WC <= 'xWMAG' order by WC", v.Local.sRet)
+'	f.ODBC.Connection!Con.ExecuteAndReturn("select RTRIM(MACHINE) WC from V_WORKCENTERS order by WC", v.Local.sRet)
+	f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+		f.Intrinsic.String.Split(v.Local.sRet, "#$#", v.Local.sWC)
+	f.Intrinsic.Control.EndIf
+'	v.Local.sSQL.Set("CREATE TABLE GCG_ANCO_WC PAGESIZE=4096 (JOB CHAR(6), SUFFIX CHAR(3)")
+	v.Local.sSQL.Set("CREATE TABLE GCG_ANCO_WC PAGESIZE=4096 (JOB CHAR(6), SUFFIX CHAR(3), GSSUSER CHAR(20)")
+	
+
+	f.Intrinsic.Control.For(v.Local.iCounter, 0, v.Local.sWC.UBound, 1)
+		f.Intrinsic.String.Build("{0}, {1} CHAR(4)", v.Local.sSQL, v.Local.sWC(v.Local.iCounter), v.Local.sSQL)
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+	f.Intrinsic.String.Concat(v.Local.sSQL,")", v.Local.sSQL)
+	
+	f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.CreateWCTable.End
+
+Program.Sub.BuildData.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sWC.Declare(String)
+	v.Local.iCounter.Declare(Long)
+	v.Local.sMsg.Declare(String)
+	v.Local.sRetPart.Declare(String)
+	v.Local.sRetFlag.Declare(String)
+	v.Local.sCurrentOrderNo.Declare(String)
+	v.Local.sCurrentOrderLine.Declare(String)
+	v.Local.iCounterInner.Declare(Long)
+	v.Local.sRepeatFlag.Declare(String)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtJOB.Exists)
+		f.Data.Datatable.Close("dtJOB")
+	f.Intrinsic.Control.EndIf
+	f.Data.Datatable.CreateFromSQL("dtJOB", "Con", "select JOB, SUFFIX from GCG_ANCO_OPENSO where JOB<>''", True)
+
+	'loop for each JOB-SUFFIX
+	f.Intrinsic.Control.For(v.Local.iCounter, 0, v.DataTable.dtJOB.RowCount--, 1)
+		f.Intrinsic.String.Build("select 'x'+RTRIM(PART) from V_JOB_OPERATIONS where LMO='L' and RTRIM(JOB)='{0}' and SUFFIX='{1}' and PART<>'' and RTRIM(PART) in (select RTRIM(MACHINE) from V_WORKCENTERS)", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+'		f.Intrinsic.String.Build("select RTRIM(PART) from V_JOB_OPERATIONS where LMO='L' and RTRIM(JOB)='{0}' and SUFFIX='{1}' and PART<>'' and RTRIM(PART) in (select RTRIM(MACHINE) from V_WORKCENTERS)", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRetPart)
+		f.Intrinsic.String.Build("select case when FLAG_CLOSED='' then 'N' else FLAG_CLOSED end from V_JOB_OPERATIONS where LMO='L' and RTRIM(JOB)='{0}' and SUFFIX='{1}' and PART<>'' and RTRIM(PART) in (select RTRIM(MACHINE) from V_WORKCENTERS)", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRetFlag)
+		
+		f.Intrinsic.Control.If(v.Local.sRetPart,!=,"")
+			f.Intrinsic.String.Split(v.Local.sRetFlag, "#$#", v.Local.sRetFlag)
+			f.Intrinsic.String.Split(v.Local.sRetPart, "#$#", v.Local.sRetPart)
+			
+			'insert base record
+'			f.Intrinsic.String.Build("insert into GCG_ANCO_WC (JOB, SUFFIX) values('{0}','{1}')", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+	'12/27 - Add GSSUSER
+			f.Intrinsic.String.Build("insert into GCG_ANCO_WC (JOB, SUFFIX) values('{0}','{1}') where RTRIM(GSSUSER)='{2}'", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+			f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+			
+			'update WC and Flag
+			v.Local.iCounterInner.Set(0)
+			f.Intrinsic.Control.For(v.Local.iCounterInner, 0, v.Local.sRetPart.UBound, 1)
+			
+				f.Intrinsic.String.Build("update GCG_ANCO_WC set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.Local.sRetPart(v.Local.iCounterInner), v.Local.sRetFlag(v.Local.iCounterInner), v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+				f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+				
+			f.Intrinsic.Control.Next(v.Local.iCounterInner)
+			
+			'update Repeat WC if any
+			f.Intrinsic.String.Build("select 'x'+RTRIM(PART) PART, Count('Y') FLAGY from V_JOB_OPERATIONS where LMO='L' and PART <> '' and JOB = '{0}' and SUFFIX = '{1}' and FLAG_CLOSED='Y' group by JOB, SUFFIX, PART having FLAGY > 1", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+			f.Intrinsic.Control.If(v.DataTable.dtRepeatFlag.Exists)
+				f.Data.Datatable.Close("dtRepeatFlag")
+			f.Intrinsic.Control.EndIf
+			f.Data.Datatable.CreateFromSQL("dtRepeatFlag", "Con", v.Local.sSQL)
+			
+			f.Intrinsic.Control.If(v.DataTable.dtRepeatFlag.RowCount,>,0)
+				v.Local.iCounterInner.Set(0)
+				f.Intrinsic.Control.For(v.Local.iCounterInner, 0, v.DataTable.dtRepeatFlag.RowCount--,1)
+					f.Intrinsic.String.Build("{0}{1}", "Y", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).FLAGY!FieldValTrim, v.Local.sRepeatFlag)
+					f.Intrinsic.String.Build("update GCG_ANCO_WC set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).PART!FieldValTrim, v.Local.sRepeatFlag, v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+					f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+				f.Intrinsic.Control.Next(v.Local.iCounterInner)
+			f.Intrinsic.Control.EndIf
+			
+		f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.BuildData.End
+
+Program.Sub.GetGridData.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtRef.Exists)
+		f.Data.Datatable.Close("dtRef")	
+	f.Intrinsic.Control.EndIf
+	
+	'12/27 - Add GSSUSER
+	f.Intrinsic.String.Build("select RTRIM(H.CUSTOMER) CUSTOMER, PRODUCT_LINE PL, RTRIM(PART) PART, LOCATION LOC, DESCRIPTION, QTY_ORDER QTY, DATE_DUE DUE_DATE, AMT_SALES AMOUNT, B.JOB+'-'+B.SUFFIX WORKORDER, B.ORDER_NO +'-'+B.ORDER_LINE SALES_ORDER, A.* from GCG_ANCO_OPENSO B left join GCG_ANCO_WC A on A.JOB=B.JOB and A.SUFFIX = B.SUFFIX and RTRIM(A.GSSUSER)=RTRIM(B.GSSUSER) left join V_JOB_HEADER H on B.JOB=H.JOB and B.SUFFIX = H.SUFFIX where RTRIM(B.GSSUSER)='{0}' order by CUSTOMER, WORKORDER", v.Caller.User, v.Local.sSQL)
+	f.Data.Datatable.CreateFromSQL("dtRef", "Con", v.Local.sSQL, True)
+	
+	
+	'dict fill Customer Name
+	f.Data.Dictionary.CreateFromSQL("dictCusRef", "Con", "select RTRIM(CUSTOMER) CUSTID, RTRIM(NAME_CUSTOMER) CUSTOMER from V_CUSTOMER_MASTER")
+	f.Data.Dictionary.SetDefaultReturn("dictCusRef", "")
+	f.Data.Datatable.AddColumn("dtRef", "CUSTOMER_NAME" ,"String")
+	f.Data.Datatable.FillFromDictionary("dtRef", "dictCusRef", "CUSTOMER", "CUSTOMER_NAME")
+	f.Data.Dictionary.Close("dictCusRef")
+	
+	'dict fill TOTAL, USED, OPEN
+	f.Data.Datatable.AddColumn("dtRef", "TOTAL", "Float")
+	f.Data.Dictionary.CreateFromSQL("dictTotal", "Con", "select JOB+'-'+SUFFIX WO, SUM(HOURS_ESTIMATED) TOTAL from V_JOB_OPERATIONS where LMO='L' and WO in (select JOB+'-'+SUFFIX from GCG_ANCO_OPENSO) group by WO")
+	f.Data.Dictionary.SetDefaultReturn("dictTotal", 0)
+	
+	f.Data.Datatable.AddColumn("dtRef", "USED", "Float")
+	f.Data.Dictionary.CreateFromSQL("dictUsed", "Con", "select JOB+'-'+SUFFIX WO, SUM(HOURS_ACTUAL) ACTUAL from V_JOB_OPERATIONS where LMO='L' and WO in (select JOB+'-'+SUFFIX from GCG_ANCO_OPENSO) group by WO")
+	f.Data.Dictionary.SetDefaultReturn("dictUsed", 0)
+	
+	f.Data.Datatable.AddColumn("dtRef", "OPEN", "Float")
+	f.Data.Dictionary.CreateFromSQL("dictOpen", "Con", "select JOB+'-'+SUFFIX WO, SUM(HOURS_ESTIMATED) - SUM(HOURS_ACTUAL) OPEN from V_JOB_OPERATIONS where LMO='L' and WO in (select JOB+'-'+SUFFIX from GCG_ANCO_OPENSO) group by WO")
+	f.Data.Dictionary.SetDefaultReturn("dictOpen", 0)
+	
+	f.Data.Datatable.FillFromDictionary("dtRef", "dictTotal", "WORKORDER", "TOTAL")
+	f.Data.Datatable.FillFromDictionary("dtRef", "dictUsed", "WORKORDER", "USED")
+	f.Data.Datatable.FillFromDictionary("dtRef", "dictOpen", "WORKORDER", "OPEN")
+	
+	f.Data.Dictionary.Close("dictOpen")
+	f.Data.Dictionary.Close("dictUsed")
+	f.Data.Dictionary.Close("dictTotal")
+	
+	'gridExport
+	gui.Form.GsgsExport.AddGridviewFromDatatable("gvExport", "dtRef")
+	gui.Form.GsgsExport.MainView("gvExport")
+	f.Intrinsic.Control.CallSub(FormatGridExport)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.GetGridData.End
+
+Program.Sub.FormatGrid.Start
+f.Intrinsic.Control.Try
+	
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.iCounter.Declare(Long)
+	
+	gui.Form.GsGridControl1.AddGridviewFromDatatable("gvSOWC", "dtRef")
+	
+	gui.Form.GsGridControl1.SetGridviewProperty("gvSOWC", v.Enum.GridViewPropertyNames!SuppressNothingDates, True)
+	gui.Form.GsGridControl1.SetGridviewProperty("gvSOWC", v.Enum.GridViewPropertyNames!ShowDetailTabs, True)
+	gui.Form.GsGridControl1.SetGridviewProperty("gvSOWC", v.Enum.GridViewPropertyNames!AllowFilter, True)
+	
+	'hide col
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "JOB", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "SUFFIX", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "CUSTOMER", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "GSSUSER", v.Enum.ColumnPropertyNames!Visible, False)
+	
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!VisibleIndex, 0)
+	
+	'captions
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!Caption, "CUSTOMER")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PART", v.Enum.ColumnPropertyNames!Caption, "PART")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DESCRIPTION", v.Enum.ColumnPropertyNames!Caption, "DESCRIPTION")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DUE_DATE", v.Enum.ColumnPropertyNames!Caption, "DUE DATE")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "SALES_ORDER", v.Enum.ColumnPropertyNames!Caption, "SALES ORDER")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "TOTAL", v.Enum.ColumnPropertyNames!Caption, "TOTAL")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "USED", v.Enum.ColumnPropertyNames!Caption, "USED")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "OPEN", v.Enum.ColumnPropertyNames!Caption, "OPEN")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "QTY", v.Enum.ColumnPropertyNames!Caption, "QTY")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "AMOUNT", v.Enum.ColumnPropertyNames!Caption, "AMOUNT")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "WORKORDER", v.Enum.ColumnPropertyNames!Caption, "WORK ORDER")
+	
+	'bold
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PART", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DESCRIPTION", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DUE_DATE", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "SALES_ORDER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "TOTAL", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "USED", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "OPEN", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "QTY", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "AMOUNT", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "WORKORDER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PL", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "LOC", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	'header align
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PART", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DESCRIPTION", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DUE_DATE", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "SALES_ORDER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "TOTAL", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "USED", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "OPEN", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "QTY", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "AMOUNT", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "WORKORDER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PL", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "LOC", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	'col align
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PL", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "LOC", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "WORKORDER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "SALES_ORDER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DUE_DATE", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	
+	'min width
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PART", v.Enum.ColumnPropertyNames!MinWidth, 160)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DESCRIPTION", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DUE_DATE", v.Enum.ColumnPropertyNames!MinWidth, 76)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "SALES_ORDER", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "TOTAL", v.Enum.ColumnPropertyNames!MinWidth, 60)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "USED", v.Enum.ColumnPropertyNames!MinWidth, 60)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "OPEN", v.Enum.ColumnPropertyNames!MinWidth, 60)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "QTY", v.Enum.ColumnPropertyNames!MinWidth, 60)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "AMOUNT", v.Enum.ColumnPropertyNames!MinWidth, 80)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "WORKORDER", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "PL", v.Enum.ColumnPropertyNames!MinWidth, 36)
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "LOC", v.Enum.ColumnPropertyNames!MinWidth, 36)
+	
+	'date
+	gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", "DUE_DATE", v.Enum.ColumnPropertyNames!DisplayCustomDateTime, "d")
+	
+	'WC Col
+	f.ODBC.Connection!Con.ExecuteAndReturn("select 'x' + RTRIM(MACHINE) WC from V_WORKCENTERS where WC <= 'xWMAG' order by WC", v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet, "#$#", v.Local.sRet)
+	f.Intrinsic.Control.For(v.Local.iCounter, 0, v.Local.sRet.UBound, 1)
+		gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!MinWidth, 56)
+		gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+		gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+		gui.Form.GsGridControl1.SetColumnProperty("gvSOWC", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+	
+	gui.Form.GsGridControl1.MainView("gvSOWC")
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.FormatGrid.End
+
+Program.Sub.FormatGridExport.Start
+f.Intrinsic.Control.Try
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "JOB", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "SUFFIX", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "CUSTOMER", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "GSSUSER", v.Enum.ColumnPropertyNames!Visible, False)
+	
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!VisibleIndex, 0)
+	
+	'captions
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!Caption, "CUSTOMER")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "PART", v.Enum.ColumnPropertyNames!Caption, "PART")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "DESCRIPTION", v.Enum.ColumnPropertyNames!Caption, "DESCRIPTION")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "DUE_DATE", v.Enum.ColumnPropertyNames!Caption, "DUE DATE")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "SALES_ORDER", v.Enum.ColumnPropertyNames!Caption, "SALES ORDER")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "TOTAL", v.Enum.ColumnPropertyNames!Caption, "TOTAL")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "USED", v.Enum.ColumnPropertyNames!Caption, "USED")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "OPEN", v.Enum.ColumnPropertyNames!Caption, "OPEN")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "QTY", v.Enum.ColumnPropertyNames!Caption, "QTY")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "AMOUNT", v.Enum.ColumnPropertyNames!Caption, "AMOUNT")
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "WORKORDER", v.Enum.ColumnPropertyNames!Caption, "WORK ORDER")
+	
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "CUSTOMER_NAME", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "PART", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "DESCRIPTION", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "DUE_DATE", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "SALES_ORDER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "TOTAL", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "USED", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "OPEN", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "QTY", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "AMOUNT", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "WORKORDER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "PL", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "LOC", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	gui.Form.GsgsExport.SetColumnProperty("gvExport", "DUE_DATE", v.Enum.ColumnPropertyNames!DisplayCustomDateTime, "d")
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.FormatGridExport.End
+
+Program.Sub.ExportToFile.Start
+f.Intrinsic.Control.Try
+	V.Local.sFileName.Declare(String)
+	v.Local.bExt.Declare(Boolean)
+	
+	f.Intrinsic.String.Build("{0} {1}", "Open Sales Order Export", v.Ambient.Now.FormatYYYYMMDD-HHNNSS, v.Local.sFileName)
+	
+	F.Intrinsic.UI.ShowSaveFileDialog(v.Local.sFileName, "*.csv", "OpenSalesOrderReport", "Open Sales Order Report 2", V.Local.sFileName)
+	
+	f.Intrinsic.Control.if(v.Local.sFileName,!=, "***CANCEL***")
+		f.Intrinsic.String.IsInString(v.Local.sFileName, ".csv", true, v.Local.bExt)
+		f.Intrinsic.Control.If(v.Local.bExt,=, false)
+			f.Intrinsic.String.Build("{0}.csv", v.Local.sFileName, v.Local.sFileName)
+		f.Intrinsic.Control.EndIf
+		gui.Form.GsgsExport.Export(v.Local.sFileName, "csv")
+		f.Intrinsic.Task.ShellExec(0,"",V.Local.sFileName,"","",1)
+	f.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.ExportToFile.End
+
+Program.Sub.AddContextMenu.Start
+f.Intrinsic.Control.If()
+
+f.Intrinsic.Control.EndIf
+gui.Form..ContextMenuCreate("cmOptions")
+gui.Form..ContextMenuAddItem("cmOptions", "cmiExport", v.Enum.MenuItemType!Button,"Export")
+gui.Form..ContextMenuSetItemEventHandler("cmOptions","cmiExport","ExportToFile")
+
+gui.Form..ContextMenuAddItem("cmOptions", "cmiRefresh", v.Enum.MenuItemType!Button, "Refresh")
+gui.Form..ContextMenuSetItemEventHandler("cmOptions", "cmiRefresh", "FormRefresh")
+
+gui.Form..ContextMenuShow("cmOptions", 2021,1988)
+gui.Form.GsGridControl1.ContextMenuAttach("cmOptions")
+Program.Sub.AddContextMenu.End
+
+Program.Sub.AddChildTable.Start
+f.Intrinsic.Control.Try
+
+	v.Local.sSQL.Declare(String)
+	v.Local.bUnique.Declare(Boolean)
+	
+	f.Intrinsic.Control.If(v.DataTable."dtRef$Operations".Exists)
+		f.Data.Datatable.Close("dtRef$Operations")
+	f.Intrinsic.Control.EndIf
+	
+	'12/27 - Add GSSUSER
+'	f.Intrinsic.String.Build("select A.PARENT_WO+'-'+A.PARENT_SUFFIX_PARENT FULLWO, A.JOB+'-'+A.SUFFIX CHILD_WO, RTRIM(A.PART) ROUTER, RTRIM(A.DESCRIPTION) DESCRIPTION, B.* from V_JOB_HEADER A left join GCG_ANCO_WC B on A.PARENT_WO = B.JOB and A.PARENT_SUFFIX_PARENT = B.SUFFIX where PART<>'' and RTRIM(B.GSSUSER)='{0}' and FULLWO in (select JOB+'-'+SUFFIX from GCG_ANCO_OPENSO where RTRIM(GSSUSER)='{0}')", v.Caller.User, v.Local.sSQL)
+	f.Intrinsic.String.Build("select A.PARENT_WO+'-'+A.PARENT_SUFFIX_PARENT FULLWO, A.JOB+'-'+A.SUFFIX CHILD_WO, RTRIM(A.PART) ROUTER, RTRIM(A.DESCRIPTION) DESCRIPTION, B.* from V_JOB_HEADER A left join GCG_ANCO_WC B on A.PARENT_WO = B.JOB and A.PARENT_SUFFIX_PARENT = B.SUFFIX where PART<>'' and RTRIM(B.GSSUSER)='{0}'", v.Caller.User, v.Local.sSQL)
+	
+	f.Data.Datatable.CreateFromSQL("dtRef$Operations", "Con", v.Local.sSQL)
+	f.Data.Datatable.AddRelation("dtRef", "WORKORDER", "dtRef$Operations", "FULLWO", "Operations")
+	
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.EndTry
+Program.Sub.AddChildTable.End
+
+'12/28 ADD CHILD TABLE
+Program.Sub.AddChildTableNew.Start
+f.Intrinsic.Control.Try
+
+	v.Local.sSQL.Declare(String)
+	v.Local.bUnique.Declare(Boolean)
+	
+	f.Intrinsic.Control.If(v.DataTable."dtRef$Operations".Exists)
+		f.Data.Datatable.Close("dtRef$Operations")
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.String.Build("select * from GCG_ANCO_WC_CHILD where RTRIM(B.GSSUSER)='{0}'", v.Caller.User, v.Local.sSQL)
+	
+	f.Data.Datatable.CreateFromSQL("dtRef$Operations", "Con", v.Local.sSQL)
+	f.Data.Datatable.AddRelation("dtRef", "WORKORDER", "dtRef$Operations", "FULLWO", "Operations")
+	
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.EndTry
+Program.Sub.AddChildTableNew.End
+
+'12/28 CREATE CHILD TABLE
+Program.Sub.CreateChildTable.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sWC.Declare(String)
+	v.Local.iCounter.Declare(Long)
+	v.Local.sMsg.Declare(String)
+	
+	'get colunm
+	f.ODBC.Connection!Con.ExecuteAndReturn("select 'x' + RTRIM(MACHINE) WC from V_WORKCENTERS where WC <= 'xWMAG' order by WC", v.Local.sRet)
+	f.Intrinsic.Control.If(v.Ambient.ExecuteAndReturnEOF,=,False)
+		f.Intrinsic.String.Split(v.Local.sRet, "#$#", v.Local.sWC)
+	f.Intrinsic.Control.EndIf
+	v.Local.sSQL.Set("CREATE TABLE GCG_ANCO_WC_CHILD PAGESIZE=4096 (FULLWO CHAR(10), CHILD_WO CHAR(10), ROUTER CHAR(20), DESCRIPTION CHAR(30), CJOB CHAR(6), CSUFFIX CHAR(3), GSSUSER CHAR(20)")
+
+	f.Intrinsic.Control.For(v.Local.iCounter, 0, v.Local.sWC.UBound, 1)
+		f.Intrinsic.String.Build("{0}, {1} CHAR(4)", v.Local.sSQL, v.Local.sWC(v.Local.iCounter), v.Local.sSQL)
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+	f.Intrinsic.String.Concat(v.Local.sSQL,")", v.Local.sSQL)
+	
+	f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.CreateChildTable.End
+
+'DROP CHILD TABLE
+Program.Sub.DropChildTable.Start
+f.Intrinsic.Control.Try
+	f.ODBC.Connection!Con.Execute("drop table GCG_ANCO_WC_CHILD")
+f.Intrinsic.Control.Catch
+f.Intrinsic.Control.EndTry
+Program.Sub.DropChildTable.end 
+
+'build CHILD TABLE
+Program.Sub.BuildChildTable.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.iCounter.Declare(Long)
+	v.Local.iCounterInner.Declare(Long)
+	v.Local.sMsg.Declare(String)
+	v.Local.sRetPart.Declare(String)
+	v.Local.sRetFlag.Declare(String)
+	v.Local.sCurrentOrderNo.Declare(String)
+	v.Local.sCurrentOrderLine.Declare(String)
+	v.Local.sRepeatFlag.Declare(String)
+	v.Local.sRepeatFlag_Count.Declare(String)
+	
+	f.Intrinsic.String.Build("insert into GCG_ANCO_WC_CHILD (FULLWO, CHILD_WO, ROUTER, DESCRIPTION, CJOB, CSUFFIX, GSSUSER) select A.PARENT_WO+'-'+A.PARENT_SUFFIX_PARENT FULLWO, A.JOB+'-'+A.SUFFIX CHILD_WO, RTRIM(A.PART) ROUTER, RTRIM(A.DESCRIPTION) DESCRIPTION, A.JOB, A.SUFFIX, '{0}' from V_JOB_HEADER A left join GCG_ANCO_WC B on A.PARENT_WO = B.JOB and A.PARENT_SUFFIX_PARENT = B.SUFFIX where PART<>'' and RTRIM(B.GSSUSER)='{0}'", v.Caller.User, v.Local.sSQL)
+	f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+	
+	'select
+	f.Intrinsic.Control.If(v.DataTable.dtJOB_Child.Exists)
+		f.Data.Datatable.Close("dtJOB_Child")
+	f.Intrinsic.Control.EndIf
+	f.Intrinsic.String.Build("select CJOB, CSUFFIX from GCG_ANCO_OPENSO where CJOB<>'' and RTRIM(GSSUSER)='{0}'", v.Caller.User, v.Local.sSQL)
+	f.Data.Datatable.CreateFromSQL("dtJOB_Child", "Con", v.Local.sSQL, True)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtJOB_Child.RowCount,=,0)
+		f.Intrinsic.Control.ExitSub
+	f.Intrinsic.Control.EndIf
+	
+	'loop for each JOB-SUFFIX
+	f.Intrinsic.Control.For(v.Local.iCounter, 0, v.DataTable.dtJOB_Child.RowCount--, 1)
+		f.Intrinsic.String.Build("select 'x'+RTRIM(PART) from V_JOB_OPERATIONS where LMO='L' and RTRIM(JOB)='{0}' and SUFFIX='{1}' and PART<>'' and RTRIM(PART) in (select RTRIM(MACHINE) from V_WORKCENTERS where RTRIM(MACHINE) <= 'WMAG')", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+		
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRetPart)
+		f.Intrinsic.String.Build("select case when FLAG_CLOSED='' then 'N' else FLAG_CLOSED end from V_JOB_OPERATIONS where LMO='L' and RTRIM(JOB)='{0}' and SUFFIX='{1}' and PART<>'' and RTRIM(PART) in (select RTRIM(MACHINE) from V_WORKCENTERS where RTRIM(MACHINE) <= 'WMAG')", v.DataTable.dtJOB_Child(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRetFlag)
+		
+		f.Intrinsic.Control.If(v.Local.sRetPart,!=,"")
+			f.Intrinsic.String.Split(v.Local.sRetFlag, "#$#", v.Local.sRetFlag)
+			f.Intrinsic.String.Split(v.Local.sRetPart, "#$#", v.Local.sRetPart)
+			
+			'insert base record
+			f.Intrinsic.String.Build("insert into GCG_ANCO_WC_CHILD (JOB, SUFFIX, GSSUSER) values('{0}','{1}','{2}')", v.DataTable.dtJOB_Child(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+			f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+			
+			'update WC and Flag
+			v.Local.iCounterInner.Set(0)
+			f.Intrinsic.Control.For(v.Local.iCounterInner, 0, v.Local.sRetPart.UBound, 1)
+			
+				f.Intrinsic.String.Build("update GCG_ANCO_WC_CHILD set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.Local.sRetPart(v.Local.iCounterInner), v.Local.sRetFlag(v.Local.iCounterInner), v.DataTable.dtJOB_Child(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+				f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+				
+			f.Intrinsic.Control.Next(v.Local.iCounterInner)
+			
+			'update Repeat WC if any
+			f.Intrinsic.String.Build("select 'x'+RTRIM(PART) PART, Count('Y') FLAGY from V_JOB_OPERATIONS where LMO='L' and PART <> '' and JOB = '{0}' and SUFFIX = '{1}' and FLAG_CLOSED='Y' group by JOB, SUFFIX, PART having FLAGY > 1", v.DataTable.dtJOB_Child(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+			f.Intrinsic.Control.If(v.DataTable.dtRepeatFlag.Exists)
+				f.Data.Datatable.Close("dtRepeatFlag")
+			f.Intrinsic.Control.EndIf
+			f.Data.Datatable.CreateFromSQL("dtRepeatFlag", "Con", v.Local.sSQL)
+			
+			f.Intrinsic.Control.If(v.DataTable.dtRepeatFlag.RowCount,>,0)
+				v.Local.iCounterInner.Set(0)
+				f.Intrinsic.Control.For(v.Local.iCounterInner, 0, v.DataTable.dtRepeatFlag.RowCount--,1)
+					
+					'12/28 check if last flag Y
+					f.Intrinsic.String.Build("select Count('Y') FLAGY from V_JOB_OPERATIONS where 'x'+PART = '{0}' and JOB='{1}' and SUFFIX='{2}' group by JOB, SUFFIX, PART having FLAGY > 1", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).PART!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+					f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRepeatFlag_Count)
+					
+					f.Intrinsic.Control.If(v.Local.sRepeatFlag_Count,=,v.DataTable.dtRepeatFlag(v.Local.iCounterInner).FLAGY!FieldValTrim)
+						f.Intrinsic.String.Build("update GCG_ANCO_WC_CHILD set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).PART!FieldValTrim, "Y", v.DataTable.dtJOB_Child(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+					f.Intrinsic.Control.Else
+						f.Intrinsic.String.Build("{0}{1}", "Y", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).FLAGY!FieldValTrim, v.Local.sRepeatFlag)
+						f.Intrinsic.String.Build("update GCG_ANCO_WC_CHILD set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).PART!FieldValTrim, v.Local.sRepeatFlag, v.DataTable.dtJOB_Child(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB_Child(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+					f.Intrinsic.Control.EndIf
+					
+					f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+				f.Intrinsic.Control.Next(v.Local.iCounterInner)
+			f.Intrinsic.Control.EndIf
+			
+		f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.BuildChildTable.End
+
+'Add Child Grid
+Program.Sub.AddChildGrid.Start
+f.Intrinsic.Control.Try
+	v.Local.bDVExist.Declare(Boolean, True)
+	v.Local.bUnique.Declare(Boolean)
+	
+	f.Data.DataView.Close("dtRef$Operations","dvOperations")
+f.Intrinsic.Control.Catch
+	v.Local.bDVExist.Set(False)
+f.Intrinsic.Control.EndTry
+
+f.Intrinsic.Control.Try
+	f.Data.DataView.Create("dtRef$Operations", "dvOperations")
+	gui.Form.GsGridControl1.AddGridviewFromDataview("gvOperations", "dtRef", "dvOperations")
+	
+	'TO-DO: format child grid
+	f.Intrinsic.Control.CallSub(FormatChildGrid)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.String.IsInString(v.Ambient.ErrorDescription, "unique", True, v.Local.bUnique)
+	f.Intrinsic.Control.if(v.Local.bUnique,=,False)
+		f.Intrinsic.Control.CallSub(Catching)
+	f.Intrinsic.Control.EndIf
+f.Intrinsic.Control.EndTry
+Program.Sub.AddChildGrid.End
+
+Program.Sub.FormatChildGrid.Start
+f.Intrinsic.Control.Try
+	v.Local.iCounter.Declare(Long)
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	
+	'hide col
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "JOB", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "SUFFIX", v.Enum.ColumnPropertyNames!Visible, False)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "GSSUSER", v.Enum.ColumnPropertyNames!Visible, False)
+	
+	
+	'caption
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "FULLWO", v.Enum.ColumnPropertyNames!Caption, "PARENT WO")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "CHILD_WO", v.Enum.ColumnPropertyNames!Caption, "CHILDREN WO")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "ROUTER", v.Enum.ColumnPropertyNames!Caption, "ROUTER")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "DESCRIPTION", v.Enum.ColumnPropertyNames!Caption, "DESCRIPTION")
+	
+	'bold header
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "FULLWO", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "CHILD_WO", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "ROUTER", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "DESCRIPTION", v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+	
+	'center header
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "FULLWO", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "CHILD_WO", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "ROUTER", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "DESCRIPTION", v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+	
+	'center cell
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "FULLWO", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "CHILD_WO", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "ROUTER", v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	
+	'minwidth
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "FULLWO", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "CHILD_WO", v.Enum.ColumnPropertyNames!MinWidth, 100)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "ROUTER", v.Enum.ColumnPropertyNames!MinWidth, 150)
+	gui.Form.GsGridControl1.SetColumnProperty("gvOperations", "DESCRIPTION", v.Enum.ColumnPropertyNames!MinWidth, 200)
+	
+	'WC Col
+	f.ODBC.Connection!Con.ExecuteAndReturn("select 'x' + RTRIM(MACHINE) WC from V_WORKCENTERS where WC <= 'xWMAG' order by WC", v.Local.sRet)
+	f.Intrinsic.String.Split(v.Local.sRet, "#$#", v.Local.sRet)
+	f.Intrinsic.Control.For(v.Local.iCounter, 0, v.Local.sRet.UBound, 1)
+		gui.Form.GsGridControl1.SetColumnProperty("gvOperations", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!MinWidth, 56)
+		gui.Form.GsGridControl1.SetColumnProperty("gvOperations", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!HeaderFontBold, True)
+		gui.Form.GsGridControl1.SetColumnProperty("gvOperations", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!HeaderHAlignment, "Center")
+		gui.Form.GsGridControl1.SetColumnProperty("gvOperations", v.Local.sRet(v.Local.iCounter), v.Enum.ColumnPropertyNames!CellHAlignment, "Center")
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.FormatChildGrid.End
+
+Program.Sub.Serialize.Start
+f.Intrinsic.Control.Try
+	v.Local.sSerialize.Declare(String)
+	
+	gui.Form.GsGridControl1.Serialize("gvSOWC", v.Local.sSerialize)
+	f.Global.Registry.AddValue(v.Caller.User, v.Caller.CompanyCode, "gvSOWC", 65521, 1000, False, "Serialize", False, 0, -999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.Serialize.End
+
+Program.Sub.Deserialize.Start
+f.Intrinsic.Control.Try
+	v.Local.sSerialize.Declare(String)
+	
+	f.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"gvSOWC",65521,1000,6,"Default",V.Local.sSerialize)
+	
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		gui.Form.GsGridControl1.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.Deserialize.End
+
+Program.Sub.SerializeChild.Start
+f.Intrinsic.Control.Try
+	v.Local.sSerialize.Declare(String)
+	
+	gui.Form.GsGridControl1.Serialize("gvOperations", v.Local.sSerialize)
+	f.Global.Registry.AddValue(v.Caller.User, v.Caller.CompanyCode, "gvOperations", 65521, 1001, False, "Serialize", False, 0, -999.0,1/1/1980,12:00:00 AM,V.Local.sSerialize)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.SerializeChild.End
+
+Program.Sub.DeserializeChild.Start
+f.Intrinsic.Control.Try
+	v.Local.sSerialize.Declare(String)
+	
+	f.Global.Registry.ReadValue(V.Caller.User,V.Caller.CompanyCode,"gvOperations",65521,1001,6,"Default",V.Local.sSerialize)
+	
+	F.Intrinsic.Control.If(V.Local.sSerialize.Trim,<>,"")
+		gui.Form.GsGridControl1.Deserialize(V.Local.sSerialize)
+	F.Intrinsic.Control.EndIf
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.DeserializeChild.End
+
+Program.Sub.Catching.Start
+f.Intrinsic.UI.Msgbox(v.Ambient.ErrorDescription)
+Program.Sub.Catching.End
+
+Program.Sub.Form_UnLoad.Start
+'serialize
+'f.Intrinsic.Control.CallSub(Serialize)
+'f.Intrinsic.Control.CallSub(SerializeChild)
+
+f.Intrinsic.Control.End
+Program.Sub.Form_UnLoad.End
+
+Program.Sub.chkAllCus_Change.Start
+f.Intrinsic.Control.Try
+
+	v.Local.bCheck.Declare(Boolean)
+	v.Local.bCheck.Set(v.Screen.Form!chkAllCus.Value)
+	
+	f.Intrinsic.Control.If(v.Local.bCheck,=,True)
+		gui.Form.cmdSelectCust.Enabled(False)
+	f.Intrinsic.Control.Else
+		gui.Form.cmdSelectCust.Enabled(True)
+	f.Intrinsic.Control.EndIf
+
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.chkAllCus_Change.End
+
+Program.Sub.BuildDataOpenSO.Start
+f.Intrinsic.Control.Try
+	v.Local.sCusSQL.Declare(String)
+	v.Local.ssQL.Declare(String)
+	v.Local.sFromDateSQL.Declare(String)
+	v.Local.sToDateSQL.Declare(String)
+	
+	v.Local.sCusSQL.Set(v.Args.argCusSQL)
+	v.Local.sFromDateSQL.Set(v.Args.argFromDateSQL)
+	v.Local.sToDateSQL.Set(v.Args.argToDateSQL)
+	
+	'12/27 - Add GSSUSER
+	f.Intrinsic.String.Build("delete from GCG_ANCO_OPENSO where RTRIM(GSSUSER)='{0}'", v.Caller.User, v.Local.ssQL)
+	f.ODBC.Connection!Con.Execute(v.Local.ssQL)
+	f.Intrinsic.String.Build("delete from GCG_ANCO_WC where RTRIM(GSSUSER)='{0}'", v.Caller.User, v.Local.ssQL)
+	f.ODBC.Connection!Con.Execute(v.Local.ssQL)
+	
+	'12/27 - Add GSSUSER
+	f.Intrinsic.String.Build("insert into GCG_ANCO_OPENSO select ORDER_NO, LEFT(RECORD_NO,3) LINE, B.JOB, B.SUFFIX, '{3}' from V_ORDER_LINES A left join V_JOB_HEADER B on A.ORDER_NO = B.SALES_ORDER and LINE = B.SALES_ORDER_LINE where B.JOB<>'' {0} {1} {2} order by ORDER_NO desc", v.Local.sFromDateSQL, v.Local.sToDateSQL, v.Local.sCusSQL, v.Caller.User, v.Local.ssQL)
+	
+	f.ODBC.Connection!Con.Execute(v.Local.ssQL)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.BuildDataOpenSO.End
+
+Program.Sub.BuildDataParam.Start
+f.Intrinsic.Control.Try
+	v.Local.sSQL.Declare(String)
+	v.Local.sRet.Declare(String)
+	v.Local.sWC.Declare(String)
+	v.Local.iCounter.Declare(Long)
+	v.Local.sMsg.Declare(String)
+	v.Local.sRetPart.Declare(String)
+	v.Local.sRetFlag.Declare(String)
+	v.Local.sCurrentOrderNo.Declare(String)
+	v.Local.sCurrentOrderLine.Declare(String)
+	v.Local.iCounterInner.Declare(Long)
+	v.Local.sRepeatFlag.Declare(String)
+	v.Local.sRepeatFlag_Count.Declare(String)
+	
+	v.Local.sDateSQL.Declare(String)
+	v.Local.sCusSQL.Declare(String)
+	
+	f.Intrinsic.Control.If(v.DataTable.dtJOB.Exists)
+		f.Data.Datatable.Close("dtJOB")
+	f.Intrinsic.Control.EndIf
+	'12/27 - Add GSSUSER
+	f.Intrinsic.String.Build("select JOB, SUFFIX from GCG_ANCO_OPENSO where JOB<>'' and RTRIM(GSSUSER)='{0}'", v.Caller.User, v.Local.sSQL)
+	f.Data.Datatable.CreateFromSQL("dtJOB", "Con", v.Local.sSQL, True)
+
+	'loop for each JOB-SUFFIX
+	f.Intrinsic.Control.For(v.Local.iCounter, 0, v.DataTable.dtJOB.RowCount--, 1)
+		f.Intrinsic.String.Build("select 'x'+RTRIM(PART) from V_JOB_OPERATIONS where LMO='L' and RTRIM(JOB)='{0}' and SUFFIX='{1}' and PART<>'' and RTRIM(PART) in (select RTRIM(MACHINE) from V_WORKCENTERS where RTRIM(MACHINE) <= 'WMAG')", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+		
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRetPart)
+		f.Intrinsic.String.Build("select case when FLAG_CLOSED='' then 'N' else FLAG_CLOSED end from V_JOB_OPERATIONS where LMO='L' and RTRIM(JOB)='{0}' and SUFFIX='{1}' and PART<>'' and RTRIM(PART) in (select RTRIM(MACHINE) from V_WORKCENTERS where RTRIM(MACHINE) <= 'WMAG')", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+		f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRetFlag)
+		
+		f.Intrinsic.Control.If(v.Local.sRetPart,!=,"")
+			f.Intrinsic.String.Split(v.Local.sRetFlag, "#$#", v.Local.sRetFlag)
+			f.Intrinsic.String.Split(v.Local.sRetPart, "#$#", v.Local.sRetPart)
+			
+			'insert base record
+			f.Intrinsic.String.Build("insert into GCG_ANCO_WC (JOB, SUFFIX, GSSUSER) values('{0}','{1}','{2}')", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+			f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+			
+			'update WC and Flag
+			v.Local.iCounterInner.Set(0)
+			f.Intrinsic.Control.For(v.Local.iCounterInner, 0, v.Local.sRetPart.UBound, 1)
+			
+				f.Intrinsic.String.Build("update GCG_ANCO_WC set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.Local.sRetPart(v.Local.iCounterInner), v.Local.sRetFlag(v.Local.iCounterInner), v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+				f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+				
+			f.Intrinsic.Control.Next(v.Local.iCounterInner)
+			
+			'update Repeat WC if any
+			f.Intrinsic.String.Build("select 'x'+RTRIM(PART) PART, Count('Y') FLAGY from V_JOB_OPERATIONS where LMO='L' and PART <> '' and JOB = '{0}' and SUFFIX = '{1}' and FLAG_CLOSED='Y' group by JOB, SUFFIX, PART having FLAGY > 1", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+			f.Intrinsic.Control.If(v.DataTable.dtRepeatFlag.Exists)
+				f.Data.Datatable.Close("dtRepeatFlag")
+			f.Intrinsic.Control.EndIf
+			f.Data.Datatable.CreateFromSQL("dtRepeatFlag", "Con", v.Local.sSQL)
+			
+			f.Intrinsic.Control.If(v.DataTable.dtRepeatFlag.RowCount,>,0)
+				v.Local.iCounterInner.Set(0)
+				f.Intrinsic.Control.For(v.Local.iCounterInner, 0, v.DataTable.dtRepeatFlag.RowCount--,1)
+					
+					'12/28 check if last flag Y
+					f.Intrinsic.String.Build("select Count('Y') FLAGY from V_JOB_OPERATIONS where 'x'+PART = '{0}' and JOB='{1}' and SUFFIX='{2}' group by JOB, SUFFIX, PART having FLAGY > 1", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).PART!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Local.sSQL)
+					f.ODBC.Connection!Con.ExecuteAndReturn(v.Local.sSQL, v.Local.sRepeatFlag_Count)
+					
+					f.Intrinsic.Control.If(v.Local.sRepeatFlag_Count,=,v.DataTable.dtRepeatFlag(v.Local.iCounterInner).FLAGY!FieldValTrim)
+						f.Intrinsic.String.Build("update GCG_ANCO_WC set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).PART!FieldValTrim, "Y", v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+					f.Intrinsic.Control.Else
+						f.Intrinsic.String.Build("{0}{1}", "Y", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).FLAGY!FieldValTrim, v.Local.sRepeatFlag)
+						f.Intrinsic.String.Build("update GCG_ANCO_WC set {0}='{1}' where JOB='{2}' and SUFFIX='{3}' and RTRIM(GSSUSER)='{4}'", v.DataTable.dtRepeatFlag(v.Local.iCounterInner).PART!FieldValTrim, v.Local.sRepeatFlag, v.DataTable.dtJOB(v.Local.iCounter).JOB!FieldValTrim, v.DataTable.dtJOB(v.Local.iCounter).SUFFIX!FieldValTrim, v.Caller.User, v.Local.sSQL)
+					f.Intrinsic.Control.EndIf
+					
+					f.ODBC.Connection!Con.Execute(v.Local.sSQL)
+				f.Intrinsic.Control.Next(v.Local.iCounterInner)
+			f.Intrinsic.Control.EndIf
+			
+		f.Intrinsic.Control.EndIf
+
+	f.Intrinsic.Control.Next(v.Local.iCounter)
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.BuildDataParam.End
+
+Program.Sub.cmdBuildData_Click.Start
+f.Intrinsic.Control.Try
+	v.Local.bCheckAllCus.Declare(Boolean)
+	v.Local.sFromDate.Declare(String)
+	v.Local.sToDate.Declare(String)
+	v.Local.bCheckRebuildCol.Declare(Boolean)
+	v.Local.sDateSQL.Declare(String)
+	v.Local.sCusSQL.Declare(String)
+	v.Local.sFromDateSQL.Declare(String)
+	v.Local.sToDateSQL.Declare(String)
+	
+	f.Intrinsic.UI.InvokeWaitDialog("Loading...")
+	
+	v.Local.bCheckAllCus.Set(v.Screen.Form!chkAllCus.Value)
+	v.Local.bCheckRebuildCol.Set(v.Screen.Form!chkRebuildCol.Value)
+	
+	gui.Form.GsGridControl1.Visible(False)
+	gui.Form..Enabled(False)
+	
+	f.ODBC.Connection!Con.OpenCompanyConnection
+	
+	f.Intrinsic.Control.If(v.Local.bCheckAllCus, =, True)
+		v.Local.sCusSQL.Set("")
+	f.Intrinsic.Control.Else
+		f.Intrinsic.String.Build(" and B.CUSTOMER in ({0})", v.Global.sSelectedCustomer, v.Local.sCusSQL)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Screen.Form!dtpFrom.Value,!=,"")
+		f.Intrinsic.String.Format(v.Screen.Form!dtpFrom.Value, "YYYY-MM-DD", v.Local.sFromDate)
+		f.Intrinsic.String.Build(" and B.DATE_DUE >= '{0}'", v.Local.sFromDate, v.Local.sFromDateSQL)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.If(v.Screen.Form!dtpTo.Value, !=,"")
+		f.Intrinsic.String.Format(v.Screen.Form!dtpTo.Value, "YYYY-MM-DD", v.Local.sToDate)
+		f.Intrinsic.String.Build(" and B.DATE_DUE <= '{0}'", v.Local.sToDate, v.Local.sToDateSQL)
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.CallSub(BuildDataOpenSO, "argFromDateSQL", v.Local.sFromDateSQL, "argToDateSQL", v.Local.sToDateSQL, "argCusSQL", v.Local.sCusSQL)
+	
+	f.Intrinsic.Control.If(v.Local.bCheckRebuildCol,=,True)
+			f.Intrinsic.Control.CallSub(DropTableWC)
+			f.Intrinsic.Control.CallSub(CreateWCTable)
+			
+			f.Intrinsic.Control.CallSub(DropChildTable)
+			f.Intrinsic.Control.CallSub(CreateChildTable)
+			
+	f.Intrinsic.Control.EndIf
+	
+	f.Intrinsic.Control.CallSub(BuildDataParam)
+	f.Intrinsic.Control.CallSub(BuildChildTable)
+	'display
+	f.Intrinsic.Control.CallSub(GetGridData)
+	f.Intrinsic.Control.CallSub(AddChildTableNew)
+'	format grid
+	f.Intrinsic.Control.CallSub(FormatGrid)
+	f.Intrinsic.Control.CallSub(AddChildGrid)
+
+	gui.Form.GsGridControl1.Visible(True)
+	
+	f.ODBC.Connection!Con.Close
+	
+	f.Intrinsic.UI.CloseWaitDialog
+	gui.Form..Enabled(True)
+	
+f.Intrinsic.Control.Catch
+	f.Intrinsic.Control.CallSub(Catching)
+f.Intrinsic.Control.EndTry
+Program.Sub.cmdBuildData_Click.End
+
+Program.Sub.Comments.Start
+${$5$}$3.0.0.0$}$1
+${$6$}$nle$}$20211228132905634$}$kjzCRYkA6UEoRnCwndYnRR2YGG3Rvw5FTWHkiIqvl28Bn47Ci0lnvX9zWelA2Y2x
+Program.Sub.Comments.End
